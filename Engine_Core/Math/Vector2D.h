@@ -1,5 +1,6 @@
 #pragma once
 
+#include "MathFwd.h"
 #include "MathUtility.h"
 #include <format>
 

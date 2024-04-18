@@ -1,3 +1,4 @@
+#include "MathFwd.h"
 #include "Vector.h"
 
 template<> const FVector3f FVector3f::ZeroVector(0, 0, 0);
