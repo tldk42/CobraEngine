@@ -1,12 +1,16 @@
 #include <iostream>
 
-#include "Math/Vector.h"
+#include "App/Window/Window.h"
+
 
 int main()
 {
-	FVector2D F(3, 1);
-	std::cout << F.ToString();
+	using namespace Cobra;
 
-	F.Normalize();
-	std::cout << F.ToString();
+	Window* testWindow = new Window(L"Test Window", {1600, 900, false, true});
+
+	while (!testWindow->IsClosed())
+		testWindow->Update();
+
+	return 0;
 }

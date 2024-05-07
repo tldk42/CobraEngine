@@ -110,6 +110,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;dxguid.lib;d3dcompiler.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -129,18 +130,49 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Logger.h" />
+    <ClInclude Include="Common\CommonInclude.h" />
+    <ClInclude Include="App\Events\Event.h" />
+    <ClInclude Include="EngineHelper.h" />
+    <ClInclude Include="Graphics\Context.h" />
+    <ClInclude Include="Graphics\Direct3D.h" />
+    <ClInclude Include="File\FileManager.h" />
+    <ClInclude Include="App\Input\InputManager.h" />
+    <ClInclude Include="Graphics\Graphics.h" />
+    <ClInclude Include="Logger\Logger.h" />
     <ClInclude Include="Math\MathFwd.h" />
     <ClInclude Include="Math\Vector.h" />
     <ClInclude Include="Math\Vector2D.h" />
+    <ClInclude Include="Thirdparty\ImGui\imconfig.h" />
+    <ClInclude Include="Thirdparty\ImGui\imgui.h" />
+    <ClInclude Include="Thirdparty\ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="Thirdparty\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="Thirdparty\ImGui\imgui_internal.h" />
+    <ClInclude Include="Thirdparty\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="Thirdparty\ImGui\imstb_textedit.h" />
+    <ClInclude Include="Thirdparty\ImGui\imstb_truetype.h" />
     <ClInclude Include="Utils\Time\Timer.h" />
+    <ClInclude Include="App\Window\Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="App\Events\Event.cpp" />
+    <ClCompile Include="EngineHelper.cpp" />
+    <ClCompile Include="Graphics\Context.cpp" />
+    <ClCompile Include="Graphics\Direct3D.cpp" />
+    <ClCompile Include="File\FileManager.cpp" />
+    <ClCompile Include="App\Input\InputManager.cpp" />
+    <ClCompile Include="Graphics\Graphics.cpp" />
+    <ClCompile Include="Logger\Logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Math\Math.cpp" />
     <ClCompile Include="Math\MathUtility.h" />
+    <ClCompile Include="Thirdparty\ImGui\imgui.cpp" />
+    <ClCompile Include="Thirdparty\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Thirdparty\ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Thirdparty\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Thirdparty\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="Thirdparty\ImGui\imgui_widgets.cpp" />
     <ClCompile Include="Utils\Time\Timer.cpp" />
+    <ClCompile Include="App\Window\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
